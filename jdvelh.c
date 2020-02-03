@@ -43,13 +43,13 @@ void villes(){
 
 void main(){
   int ChoixJoueur = 0;
-  int vie = 50;
-  int or = 50;
+  int vie = 100;
+  int or = 10;
 
   chapitre Chapitre1 ={"Vous arrivez au portes de la tour d\'Elvira\nVous avez marcher longtemps cela vous a fait perdre votre endurance ",50, - 5,{3,5}};
   chapitre Chapitre3 ={"Apres avoir rebrousser chemin vous vous perdez dans la foret\n",0,70,{0}};
   chapitre Chapitre5 ={"Vous entrer dans le donjon,\nVous recuperer un coffre rempli d\'Or ",500,0,};
-  chapitre Chapitre2 ={"Apres avoir mis un pied dans la boue, un panneau indique : Village de PayaKaroon\n\nVous avez trouver sur la route un sac de pieces et des vielles bottes de chevalier\n\n      ( Vie +10 )\n      ( Or + 50 )\n",50,10,{2,4}};
+  chapitre Chapitre2 ={"Apres avoir mis un pied dans la boue, un panneau indique : Village de PayaKaroon\n\nVous avez trouver sur la route un sac de pieces et des vielles bottes de chevalier\n\n       ( Or + 50 )\n",50,10,{2,4}};
   chapitre Chapitre4 ={"Vous sortez une arme mais tout les habitants sont des chasseurs de primes,\nIls vous tue.\n     ( Vie - 60)\n\n",0,60,{0}};
   chapitre Chapitre6 ={"Vous allez parler a un habitant qui vous donne une mystérieuse carte et une potion\n",10,50,{0}};
 
@@ -95,10 +95,8 @@ void main(){
 
       if (ChoixJoueur == 2){
               printf("\n%s", Chapitre2.description);
-              vie = vie + Chapitre2.gain_vie;
               or = or + Chapitre2.gain_or;
-              printf("\nVie : %d\n\n", vie);
-              printf("Or : %d\n\n", or);
+              printf("\nOr : %d\n\n", or);
               printf("2 choix s'offre a vous ici :\n\n");
               printf("Sortir son arme [4]       |       ");
               printf("Allez parler un ce vieux monsieur [6]\n\n");
